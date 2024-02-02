@@ -2,8 +2,12 @@ import React from 'react';
 import { Form } from "react-bootstrap";
 import SelectPaises from './SelectPaises';
 
-const Formulario = () => {
-    
+const Formulario = ({ onCategoryChange }) => {
+    const handleCategoryChange = (e) => {
+        const newCategoria = e.target.value;
+        onCategoryChange(newCategoria);
+      };
+
 
     return (
         <section className="mt-4 ">
@@ -16,7 +20,7 @@ const Formulario = () => {
           <Form.Select
             aria-label="Default select example"
             className="w-75"
-            
+            onChange={handleCategoryChange}
           >
             <option value="world">General</option>
             <option value="business">business</option>
