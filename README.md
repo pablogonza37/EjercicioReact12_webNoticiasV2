@@ -1,4 +1,4 @@
-# Proyecto React Web de Noticias
+# Proyecto React Web de Noticias (v2)
 
 Este proyecto consiste en una aplicación web desarrollada con React que consume la API proporcionada por Newsdata.io. La aplicación permite al usuario seleccionar diferentes categorías de noticias y por Pais a través de un formulario y muestra las noticias correspondientes en cards.
 
