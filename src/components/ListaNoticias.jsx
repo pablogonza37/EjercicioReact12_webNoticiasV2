@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 const ListaNoticias = ({categoria, pais}) => {
   const [noticias, setNoticias] = useState([]);
   const [error, setError] = useState(null);
+  const apiKey = 'pub_374867eb717c36cfe3081169e0a55ea02fe14'
 
   useEffect(() => {
     fetchNoticias(categoria, pais);
@@ -12,7 +13,7 @@ const ListaNoticias = ({categoria, pais}) => {
 
   const fetchNoticias = (categoria, pais) => {
     fetch(
-      `https://newsdata.io/api/1/news?apikey=pub_374867eb717c36cfe3081169e0a55ea02fe14&country=${pais}&category=${categoria}`
+      `https://newsdata.io/api/1/news?apikey=${apiKey}&country=${pais}&category=${categoria}`
     )
       .then((resp) => {
         if (!resp.ok) {
